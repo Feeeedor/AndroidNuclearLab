@@ -1,7 +1,6 @@
 package com.example.nuclearandroidlab
-
-import android.R.attr.value
 import android.content.Intent
+import com.example.nuclearandroidlab.R
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -10,38 +9,27 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-
-class ActivityA : AppCompatActivity() {
+class ActivityB : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_a)
+        setContentView(R.layout.activity_b)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val buttonOpenActivityB = findViewById<Button>(R.id.open_activityb_button)
-        buttonOpenActivityB.setOnClickListener {
+        val buttonOpenActivityC = findViewById<Button>(R.id.open_activityc_button)
+        buttonOpenActivityC.setOnClickListener {
             val myIntent: Intent = Intent(
-                this,     ActivityB::class.java
+                this,     ActivityC::class.java
             )
-            myIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_MULTIPLE_TASK
+
             this.startActivity(myIntent)
         }
-        val buttonOpenFragmentB = findViewById<Button>(R.id.open_fragmentb_button)
-        buttonOpenFragmentB.setOnClickListener {
-            /*
-            Какое-то действие
-             */
-        }
-        val taskIdText = findViewById<TextView>(R.id.taska_id_text)
-        taskIdText.text =  this.taskId.toString()
-        val activityIdText = findViewById<TextView>(R.id.activitya_id_text)
+        val taskIdText = findViewById<TextView>(R.id.taskb_id_text)
+        taskIdText.text = this.taskId.toString()
+        val activityIdText = findViewById<TextView>(R.id.activityb_id_text)
         activityIdText.text = this.hashCode().toString()
     }
-
-
-
 }
