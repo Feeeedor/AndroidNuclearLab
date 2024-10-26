@@ -2,7 +2,9 @@ package com.example.nuclearandroidlab
 
 import android.R.attr.value
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -32,9 +34,22 @@ class ActivityA : AppCompatActivity() {
         }
         val buttonOpenFragmentB = findViewById<Button>(R.id.open_fragmentb_button)
         buttonOpenFragmentB.setOnClickListener {
-            /*
-            Какое-то действие
-             */
+
+
+                if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container_ba, FragmentBA())
+                            .replace(R.id.fragment_container_bb, FragmentBB())
+                            .commit()
+
+                } else {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container_ba, FragmentBA())
+
+                        .commit()
+                }
+
         }
         val taskIdText = findViewById<TextView>(R.id.taska_id_text)
         taskIdText.text =  this.taskId.toString()

@@ -10,4 +10,7 @@
     <string name="taskc_id_text">task c id text</string>
     <string name="activityc_id_text">activity c id text</string>
     <string name="open_activitya">Open ActivityA</string>
+    <string name="open_fragment_bb">Open Fragment BB</string>
+    <string name="send_color">Send Color</string>
+
 </resources>
