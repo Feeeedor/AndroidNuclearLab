@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">NuclearAndroidLab</string>
+    <string name="open_activityb">Open ActivityB</string>
+    <string name="open_fragmentb">Open FragmentB</string>
+    <string name="open_activityc">Open ActivityC</string>
+    <string name="taska_id_text">task a id text</string>
+    <string name="activitya_id_text">activity a id text</string>
+    <string name="taskb_id_text">task b id text</string>
+    <string name="activityb_id_text">activity b id text</string>
+    <string name="taskc_id_text">task c id text</string>
+    <string name="activityc_id_text">activity c id text</string>
+    <string name="open_activitya">Open ActivityA</string>
+    <string name="open_fragment_bb">Open Fragment BB</string>
+    <string name="send_color">Send Color</string>
+    <string name="fragment_ba_id_text">FragmentBA</string>
+    <string name="fragment_bb_id_text">FragmentBB</string>
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fragment_b_b"
+    android:background="@color/fragment_bb_color"
+    >
+    <TextView
+        android:id="@+id/fragment_bb_id_text"
+        style="?android:attr/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/send_color_button"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/fragment_bb_id_text"/>
+    <Button
+        android:id="@+id/send_color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/send_color_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/send_color" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

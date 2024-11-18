@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ActivityA_color">#f44336</color>
+    <color name="ActivityB_color">#ff0000ff</color>
+    <color name="fragment_ba_color">#f46336</color>
+    <color name="fragment_bb_color">#f46336</color>
 </resources>
