@@ -12,5 +12,6 @@
     <string name="open_activitya">Open ActivityA</string>
     <string name="open_fragment_bb">Open Fragment BB</string>
     <string name="send_color">Send Color</string>
-
+    <string name="fragment_ba_id_text">FragmentBA</string>
+    <string name="fragment_bb_id_text">FragmentBB</string>
 </resources>

@@ -34,8 +34,6 @@ class ActivityA : AppCompatActivity() {
         }
         val buttonOpenFragmentB = findViewById<Button>(R.id.open_fragmentb_button)
         buttonOpenFragmentB.setOnClickListener {
-
-
                 if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
                         supportFragmentManager.beginTransaction()
@@ -45,8 +43,7 @@ class ActivityA : AppCompatActivity() {
 
                 } else {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_ba, FragmentBA())
-
+                        .replace(R.id.fragment_container_b_vertical, FragmentBA())
                         .commit()
                 }
 

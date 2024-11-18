@@ -5,74 +5,76 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f44336"
+    android:background="@color/ActivityA_color"
     tools:context=".ActivityA"
+
     >
+
     <TextView
         android:id="@+id/activitya_id_text"
+        style="?android:attr/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activitya_id_text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/taska_id_text"
-        style="?android:attr/text"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/taska_id_text"
+        style="?android:attr/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/taska_id_text"
-        app:layout_constraintTop_toBottomOf="@id/activitya_id_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/open_activityb_button"
-        style="?android:attr/text"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activitya_id_text" />
+
     <Button
         android:id="@+id/open_activityb_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_activityb"
-        app:layout_constraintTop_toBottomOf="@id/taska_id_text"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/open_fragmentb_button"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintBottom_toTopOf="@+id/open_fragmentb_button"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taska_id_text" />
+
     <Button
         android:id="@+id/open_fragmentb_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_fragmentb"
-        app:layout_constraintTop_toBottomOf="@id/open_activityb_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/open_activityb_button" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_ba"
-        android:layout_width="126dp"
-        android:layout_height="236dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.50"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintHorizontal_weight="1"
+        />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_bb"
-        android:layout_width="119dp"
-        android:layout_height="230dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fragment_container_ba"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fragment_container_ba"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
-        app:layout_constraintStart_toEndOf="@+id/fragment_container_ba"
-        app:layout_constraintTop_toTopOf="@+id/fragment_container_ba"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_weight="1"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f44336"
+    android:background="@color/ActivityA_color"
     tools:context=".ActivityA"
     >
     <TextView
@@ -53,26 +53,9 @@
         style="?android:attr/borderlessButtonStyle"/>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_ba"
-        android:layout_width="126dp"
-        android:layout_height="236dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        android:id="@+id/fragment_container_b_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_bb"
-        android:layout_width="119dp"
-        android:layout_height="230dp"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fragment_container_ba"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
-        app:layout_constraintStart_toEndOf="@+id/fragment_container_ba"
-        app:layout_constraintTop_toTopOf="@+id/fragment_container_ba"
-        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

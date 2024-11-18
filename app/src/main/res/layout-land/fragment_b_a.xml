@@ -4,12 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@color/fragment_ba_color"
     >
 
-    <Button
-        android:id="@+id/open_fragment_bb_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/open_fragment_bb" />
+
 
 </LinearLayout>

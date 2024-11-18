@@ -1,15 +1,14 @@
 package com.example.nuclearandroidlab
 
+
 import android.content.res.Configuration
-import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.os.bundleOf
-import java.util.Random
+import androidx.fragment.app.Fragment
+import com.example.nuclearandroidlab.utils.colorUtils
+
 
 
 class FragmentBB : Fragment(R.layout.fragment_b_b) {
@@ -19,15 +18,13 @@ class FragmentBB : Fragment(R.layout.fragment_b_b) {
 
         val sendColorButton = view.findViewById<Button>(R.id.send_color_button)
         sendColorButton.setOnClickListener {
-            val randomColor = generateRandomColor()
+            val randomColor = colorUtils.generateRandomColor()
             parentFragmentManager.setFragmentResult("colorRequestKey", bundleOf("color" to randomColor))
-
-
+            if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+                parentFragmentManager.popBackStack();
+            }
         }
     }
 
-    private fun generateRandomColor(): Int {
-        val rnd = Random()
-        return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
-    }
+
 }
